@@ -3,14 +3,15 @@
     <el-col>
       <el-menu
         default-active="1"
-        class="el-menu-vertical-demo"
+        class="el-menu-vertical"
         @open="handleOpen"
-        @close="handleClose">
-        <el-menu-item index="1">
+        @close="handleClose"
+        @select="handleSelect">
+        <el-menu-item index="Interaction">
           <i class="el-icon-mouse"></i>
           <span slot="title">交互配置</span>
         </el-menu-item>
-        <el-menu-item index="2">
+        <el-menu-item index="Document">
           <i class="el-icon-document"></i>
           <span slot="title">脚本配置</span>
         </el-menu-item>
@@ -23,16 +24,34 @@
   </el-row>
 </template>
 <script>
+import left from '@/components/left'
+import Document from "./config/Document";
+import Interaction from "./config/Interaction";
+
+
 export default {
+  components: {
+    Document,
+    Interaction,
+  },
   methods: {
     handleOpen(key, keyPath) {
       console.log(key, keyPath);
     },
     handleClose(key, keyPath) {
       console.log(key, keyPath);
-    }
+    },
+    handleSelect(key, keyPath) {
+      this.$router.push({
+        name: key,
+      });
+
+      console.log(key, keyPath);
+    },
+
   }
 }
+
 </script>
 
 <style>
