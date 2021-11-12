@@ -1,52 +1,58 @@
 <template>
-  <el-row :gutter="20">
-    <el-col :span="12"><div class="grid-content bg-purple"></div></el-col>
-
-    <el-col :span="12">
-      <el-row :gutter="15">
-        <el-col ><div class="grid-content2 bg-purple"></div></el-col>
-      </el-row>
-      <el-row :gutter="15">
-        <el-col ><div class="grid-content2 bg-purple"></div></el-col>
-      </el-row>
-
-<!--      <div class="grid-content bg-purple"></div>-->
+  <el-row class="autoHeight">
+    <el-col class="grid-content width-50 content-color">
+      <div></div>
     </el-col>
 
+    <el-col class="grid-content width-50">
 
-<!--    <el-col :span="12"><div class="grid-content bg-purple"></div></el-col>-->
+      <el-row style="margin-bottom: 2%" class="grid-content2 content-color">
+        <div></div>
+      </el-row>
 
-<!--    <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>-->
-<!--    <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>-->
+      <el-row style="margin-top: 2%" class="grid-content2 content-color">
+        <div></div>
+      </el-row>
+
+    </el-col>
+
   </el-row>
 </template>
 
 <style>
-  .el-row {
-    margin-bottom: 20px;
-  }
-  .el-col {
-    border-radius: 4px;
-  }
-  .bg-purple-dark {
-    background: #b5c6dc;
-  }
-  .bg-purple {
-    background: #f4f6f8;
-  }
-  .bg-purple-light {
-    background: #f3f4f6;
-  }
-  .grid-content {
-    border-radius: 4px;
-    min-height: 500px;
-  }
-  .grid-content2 {
-    border-radius: 4px;
-    min-height: 240px;
-  }
-  .row-bg {
-    padding: 10px 0;
-    background-color: #f9fafc;
-  }
+.el-row {
+  background-color: #e8f8de;
+}
+
+.el-col {
+}
+
+.grid-content {
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 15px;
+  min-height: 500px;
+  height: 100%;
+
+}
+
+.content-color {
+  background-color: #fefffe;
+}
+
+.width-50 {
+  width: 48%;
+}
+
+.grid-content2 {
+  border-radius: 15px;
+  min-height: 240px;
+  height: 49%;
+}
+
+
+.autoHeight {
+  min-height: 300px;
+  height: 100%;
+}
 </style>
