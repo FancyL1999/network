@@ -3,55 +3,50 @@
     <el-col class="grid-content width-50 content-color">
       <router-view/>
     </el-col>
-
     <el-col class="grid-content width-50">
-
       <el-row style="margin-bottom: 2%" class="grid-content2 content-color">
-
       </el-row>
-
       <el-row style="margin-top: 2%" class="grid-content2 content-color">
-        <div></div>
       </el-row>
-
     </el-col>
-
   </el-row>
 </template>
 
 <style>
-.el-row {
-  background-color: #e8f8de;
-}
+  .el-row {
+    /*background-color: #FFFFFF;*/
+    background-color: #f8f8fa;
 
-.el-col {
-}
+  }
 
-.grid-content {
-  margin-left: 15px;
-  margin-right: 15px;
-  border-radius: 15px;
-  min-height: 500px;
-  height: 100%;
-}
+  .el-col {
+  }
 
-.content-color {
-  background-color: #fefffe;
-}
+  .grid-content {
+    /*margin-left: 15px;*/
+    margin-right: 1%;
+    border-radius: 5px;
+    /*min-height: 500px;*/
+    height: 100%;
+  }
 
-.width-50 {
-  width: 48%;
-}
+  .content-color {
+    /*background-color: #f8f8fa;*/
+    background-color: #FFFFFF;
+  }
 
-.grid-content2 {
-  border-radius: 15px;
-  min-height: 240px;
-  height: 49%;
-}
+  .width-50 {
+    width: 49%;
+  }
 
+  .grid-content2 {
+    border-radius: 5px;
+    min-height: 240px;
+    height: 49%;
+  }
 
-.autoHeight {
-  min-height: 300px;
-  height: 100%;
-}
+  .autoHeight {
+    /*min-height: 300px;*/
+    height: 100%;
+  }
 </style>
