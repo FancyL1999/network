@@ -1,12 +1,28 @@
 <template>
-
   <div>
-    <el-row type="flex" align="left" style="margin-top: 5%; margin-bottom: 1%">
+    <el-row type="flex" align="left" style="margin-top: 3%; margin-bottom: 1%">
+      <el-col :span="1"/>
+      <el-col style="font-size: 13px">
+        PING
+      </el-col>
+
+    </el-row>
+
+    <el-row type="flex" align="left">
+      <el-col :span="1"/>
+      <el-col :span="5">
+        <el-input size="small" placeholder="请输入IP" v-model="ip"></el-input>
+      </el-col>
+      <el-col :span="1"/>
+      <el-col :span="4">
+        <el-button size="small" type="primary" plain>发送</el-button>
+      </el-col>
+    </el-row>
+
+    <el-row type="flex" align="left" style="margin-bottom: 1%">
       <el-col :span="1"/>
       <el-col>
-        <div>
-          配置文件
-        </div>
+        测试文件
       </el-col>
 
     </el-row>
@@ -45,7 +61,9 @@
           <div slot="tip" class="el-upload__tip">只能上传yml/yaml文件</div>
         </el-upload>
       </el-col>
-      <el-col :span="4"><el-button size="small" type="primary" plain>提交</el-button></el-col>
+      <el-col :span="4">
+        <el-button size="small" type="primary" plain>提交</el-button>
+      </el-col>
 
     </el-row>
 
@@ -59,40 +77,24 @@
       </el-input>
     </el-row>
 
-<!--    <div v-text="msg" ></div>-->
+    <!--    <div v-text="msg" ></div>-->
 
 
   </div>
-
 </template>
 
 <script>
 export default {
-  name: "Document",
+  name: "Check",
   data() {
     return {
-      textarea: '',
-      fileList: [],
-      msg: ''
-    }
-  },
-  methods: {
-    submitUpload() {
-      this.$refs.upload.submit();
-    },
-    handleRemove(file, fileList) {
-      console.log(file, fileList);
-    },
-    handlePreview(file) {
-      console.log(file);
+      ip: '',
     }
   }
-
 }
 </script>
 
 <style scoped>
-
 .el-row {
   /*margin-bottom: 20px;*/
   float: left;
@@ -105,5 +107,4 @@ export default {
   line-height: 5px;
   text-align: left;
 }
-
 </style>

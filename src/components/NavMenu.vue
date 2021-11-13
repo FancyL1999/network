@@ -21,7 +21,7 @@
           <i class="el-icon-document"></i>
           <span slot="title">脚本配置</span>
         </el-menu-item>
-        <el-menu-item index="4">
+        <el-menu-item index="Check">
           <i class="el-icon-view"></i>
           <span slot="title">拓扑校验</span>
         </el-menu-item>

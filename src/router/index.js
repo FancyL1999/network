@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Document from "../components/config/Document";
 import Interaction from "../components/config/Interaction";
+import Check from "../components/Check";
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ const router = new Router({
       path:'/config/interaction',
       name: 'Interaction',
       component: Interaction
+    },
+    {
+      path:'/check',
+      name: 'Check',
+      component: Check
     }
   ]
 })
