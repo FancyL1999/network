@@ -5,13 +5,31 @@
     </el-col>
     <el-col class="grid-content width-50">
       <el-row style="margin-bottom: 2%" class="grid-content2 content-color">
+        <graph></graph>
       </el-row>
       <el-row style="margin-top: 2%" class="grid-content2 content-color">
+        <showinfo></showinfo>
       </el-row>
     </el-col>
   </el-row>
 </template>
+<script>
+  import Graph from '@/components/Graph'
+  import Showinfo from '@/components/ShowInfo'
 
+  export default {
+    name: 'Left',
+    components: {
+      'graph': Graph,
+      'showinfo':Showinfo
+
+    },
+    data() {
+      return {
+      }
+    }
+  }
+</script>
 <style>
   .el-row {
     /*background-color: #FFFFFF;*/
