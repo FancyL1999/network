@@ -6,12 +6,14 @@ import 'element-ui/lib/theme-chalk/index.css'
 // import router from './router/index.js'
 // Vue.use(router)
 import router from '@/router/index.js'
+import axios from 'axios'
 
 import App from './App'
 
 Vue.config.productionTip = false
 
 Vue.use(ElementUI)
+Vue.prototype.$axios = axios
 
 
 /* eslint-disable no-new */

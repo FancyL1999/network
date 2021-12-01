@@ -1,19 +1,43 @@
 <template>
-
   <div>
     <el-row type="flex" align="left" style="margin-top: 5%; margin-bottom: 1%">
+      <el-col :span="1"/>
+      <el-col>
+        <div>
+          配置命令
+        </div>
+      </el-col>
+    </el-row>
+
+    <el-row type="flex" align="left">
+      <el-col :span="1"/>
+      <el-col>
+        <el-input
+          type="textarea"
+          :rows="5"
+          placeholder="请输入内容"
+          v-model="textcommand">
+        </el-input>
+      </el-col>
+      <el-col :span="1"/>
+    </el-row>
+
+    <el-row>
+      <el-col :span="24"/>
+      <el-col :span="4"><el-button size="small" type="primary" plain>运行</el-button></el-col>
+    </el-row>
+
+    <el-row type="flex" align="left">
       <el-col :span="1"/>
       <el-col>
         <div>
           配置文件
         </div>
       </el-col>
-
     </el-row>
 
     <el-row type="flex" align="left">
       <el-col :span="1"/>
-
       <el-col>
         <el-input
           type="textarea"
@@ -22,15 +46,11 @@
           v-model="textarea">
         </el-input>
       </el-col>
-
       <el-col :span="1"/>
-
     </el-row>
 
     <el-row>
-
       <el-col :span="1"/>
-
       <el-col style="height: 70px">
         <el-upload
           class="upload-demo"
@@ -46,7 +66,6 @@
         </el-upload>
       </el-col>
       <el-col :span="4"><el-button size="small" type="primary" plain>提交</el-button></el-col>
-
     </el-row>
 
     <el-row style="height: 100%;margin-left: 5%; width: 90%;">
@@ -59,11 +78,7 @@
       </el-input>
     </el-row>
 
-<!--    <div v-text="msg" ></div>-->
-
-
   </div>
-
 </template>
 
 <script>
@@ -72,6 +87,7 @@ export default {
   data() {
     return {
       textarea: '',
+      textcommand: '',
       fileList: [],
       msg: ''
     }
