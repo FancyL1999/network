@@ -53,7 +53,12 @@
       </el-col>
 
       <el-col :span="4">
-        <el-button size="small" type="primary" plain>提交</el-button>
+        <el-button
+          size="small"
+          type="primary"
+          plain
+          @click="handleSub('s0/0/1', ip_s1, mask_s1)">提交
+        </el-button>
       </el-col>
     </el-row>
 
@@ -78,7 +83,12 @@
         <el-input size="small" placeholder="请输入掩码" v-model="mask_g0"></el-input>
       </el-col>
       <el-col :span="4">
-        <el-button size="small" type="primary" plain>提交</el-button>
+        <el-button
+          size="small"
+          type="primary"
+          plain
+          @click="handleSub('g0/0/0', ip_g0, mask_g0)">提交
+        </el-button>
       </el-col>
     </el-row>
 
@@ -103,7 +113,12 @@
         <el-input size="small" placeholder="请输入掩码" v-model="mask_g1"></el-input>
       </el-col>
       <el-col :span="4">
-        <el-button size="small" type="primary" plain>提交</el-button>
+        <el-button
+          size="small"
+          type="primary"
+          plain
+          @click="handleSub('g0/0/1', ip_g1, mask_g1)">提交
+        </el-button>
       </el-col>
     </el-row>
 
@@ -128,7 +143,12 @@
         <el-input size="small" placeholder="请输入掩码" v-model="mask_lb1"></el-input>
       </el-col>
       <el-col :span="4">
-        <el-button size="small" type="primary" plain>提交</el-button>
+        <el-button
+          size="small"
+          type="primary"
+          plain
+          @click="handleSub('loopback01', ip_lb1, mask_lb1)">提交
+        </el-button>
       </el-col>
     </el-row>
 
@@ -153,7 +173,12 @@
         <el-input size="small" placeholder="请输入掩码" v-model="mask_lb2"></el-input>
       </el-col>
       <el-col :span="4">
-        <el-button size="small" type="primary" plain>提交</el-button>
+        <el-button
+          size="small"
+          type="primary"
+          plain
+          @click="handleSub('loopback02', ip_lb2, mask_lb2)">提交
+        </el-button>
       </el-col>
     </el-row>
 
@@ -178,7 +203,12 @@
         <el-input size="small" placeholder="请输入掩码" v-model="mask_lb3"></el-input>
       </el-col>
       <el-col :span="4">
-        <el-button size="small" type="primary" plain>提交</el-button>
+        <el-button
+          size="small"
+          type="primary"
+          plain
+          @click="handleSub('loopback03', ip_lb3, mask_lb3)">提交
+        </el-button>
       </el-col>
     </el-row>
 
@@ -203,7 +233,12 @@
         <el-input size="small" placeholder="请输入掩码" v-model="mask_lb4"></el-input>
       </el-col>
       <el-col :span="4">
-        <el-button size="small" type="primary" plain>提交</el-button>
+        <el-button
+          size="small"
+          type="primary"
+          plain
+          @click="handleSub('loopback04', ip_lb4, mask_lb4)">提交
+        </el-button>
       </el-col>
     </el-row>
 
@@ -228,7 +263,12 @@
         <el-input size="small" placeholder="请输入掩码" v-model="mask_lb5"></el-input>
       </el-col>
       <el-col :span="4">
-        <el-button size="small" type="primary" plain>提交</el-button>
+        <el-button
+          size="small"
+          type="primary"
+          plain
+          @click="handleSub('loopback05', ip_lb5, mask_lb5)">提交
+        </el-button>
       </el-col>
     </el-row>
 
@@ -274,21 +314,28 @@ export default {
   },
   methods: {
     handleSub(inter, ip, mask) {
+      // console.log("dsda")
+      // console.log(this.$parent.$parent.$parent.$parent.$parent.$parent.$parent.$data.value)
+      // console.log(inter)
+      // console.log(ip)
+      // console.log(mask)
 
-      console.log(this.$parent.$parent.$parent.$parent.$parent.$parent.$parent.$data.value)
-
-      // this.$axios({
-      //   url: 'http://localhost:8080/config/interaction',
-      //   method: 'put',
-      //   data: {id: '', interface: inter, ip: ip, mask: mask}, // body参数
-      //   // params: {
-      //   //   end: 1900 + this.$data.end.getYear()
-      //   // } // query参数
-      // }).then(response => {
-      //   console.log(response.data)
-      //   this.$data.label = response.data.label
-      //
-      // })
+      this.$axios({
+        url: 'http://localhost:8080/config/interaction',
+        method: 'put',
+        data: {
+          id: this.$parent.$parent.$parent.$parent.$parent.$parent.$parent.$data.value,
+          interface: inter,
+          ip: ip,
+          mask: mask
+        }, // body参数
+        // params: {
+        //   end: 1900 + this.$data.end.getYear()
+        // } // query参数
+      }).then(response => {
+        // console.log(response.data)
+        this.$data.msg = response.data.data
+      })
     }
   }
 }

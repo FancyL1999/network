@@ -15,7 +15,7 @@
       </el-col>
       <el-col :span="1"/>
       <el-col :span="4">
-        <el-button size="small" type="primary" plain>发送</el-button>
+        <el-button size="small" type="primary" plain @click="handlePing()">发送</el-button>
       </el-col>
     </el-row>
 
@@ -51,7 +51,7 @@
         <el-upload
           class="upload-demo"
           ref="upload"
-          action="https://jsonplaceholder.typicode.com/posts/"
+          action="http://localhost:8080/file/test"
           :on-preview="handlePreview"
           :on-remove="handleRemove"
           :file-list="fileList"
@@ -62,7 +62,11 @@
         </el-upload>
       </el-col>
       <el-col :span="4">
-        <el-button size="small" type="primary" plain>提交</el-button>
+        <el-button
+          size="small"
+          type="primary"
+          plain
+          @click="updateTestFile()">提交</el-button>
       </el-col>
 
     </el-row>
@@ -89,7 +93,56 @@ export default {
   data() {
     return {
       ip: '',
+      textarea: '',
+      fileList: [],
+      msg: ''
     }
+  },
+  methods: {
+    submitUpload() {
+      this.$refs.upload.submit();
+    },
+    handleRemove(file, fileList) {
+      console.log(file, fileList);
+    },
+    handlePreview(file) {
+      console.log(file);
+    },
+    handlePing() {
+      let curId = this.$parent.$parent.$parent.$parent.$parent.$parent.$parent.$data.value
+      // console.log(curId)
+      this.$axios({
+        url: 'http://localhost:8080/check/ping/'+ curId,
+        method: 'put',
+        params: {
+          ip: this.$data.ip
+        } // query参数
+      }).then(response => {
+        this.$data.msg = response.data.data
+      })
+    },
+    getTestFile() {
+      this.$axios({
+        url: 'http://localhost:8080/file/test',
+        method: 'get'
+      }).then(response => {
+        this.$data.textarea = response.data.data
+      })
+    },
+    updateTestFile() {
+      this.$axios({
+        url: 'http://localhost:8080/file/test',
+        method: 'put',
+        params: {
+          context: this.$data.textarea
+        } // query参数
+      }).then(response => {
+        this.$data.msg = response.data.data
+      })
+    }
+  },
+  mounted:function () {   //自动触发写入的函数
+    this.getTestFile();
   }
 }
 </script>

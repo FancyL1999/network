@@ -24,7 +24,14 @@
 
     <el-row>
       <el-col :span="24"/>
-      <el-col :span="4"><el-button size="small" type="primary" plain>运行</el-button></el-col>
+      <el-col :span="4">
+        <el-button
+          size="small"
+          type="primary"
+          plain
+          @click="handleCommand()">运行
+        </el-button>
+      </el-col>
     </el-row>
 
     <el-row type="flex" align="left">
@@ -55,7 +62,7 @@
         <el-upload
           class="upload-demo"
           ref="upload"
-          action="https://jsonplaceholder.typicode.com/posts/"
+          action="http://localhost:8080/file/config"
           :on-preview="handlePreview"
           :on-remove="handleRemove"
           :file-list="fileList"
@@ -65,7 +72,14 @@
           <div slot="tip" class="el-upload__tip">只能上传yml/yaml文件</div>
         </el-upload>
       </el-col>
-      <el-col :span="4"><el-button size="small" type="primary" plain>提交</el-button></el-col>
+      <el-col :span="4">
+        <el-button
+          size="small"
+          type="primary"
+          plain
+          @click="updateConfigFile()">提交
+        </el-button>
+      </el-col>
     </el-row>
 
     <el-row style="height: 100%;margin-left: 5%; width: 90%;">
@@ -101,7 +115,46 @@ export default {
     },
     handlePreview(file) {
       console.log(file);
+    },
+    handleCommand() {
+      // console.log(this.$parent.$parent.$parent.$parent.$parent.$parent.$parent.$data.value)
+      this.$axios({
+        url: 'http://localhost:8080/config/command',
+        method: 'put',
+        data: {
+          id: this.$parent.$parent.$parent.$parent.$parent.$parent.$parent.$data.value,
+          command: textcommand
+        }, // body参数
+        // params: {
+        //   end: 1900 + this.$data.end.getYear()
+        // } // query参数
+      }).then(response => {
+        this.$data.msg = response.data.data
+      })
+    },
+    getConfigFile() {
+      this.$axios({
+        url: 'http://localhost:8080/file/config',
+        method: 'get'
+      }).then(response => {
+        this.$data.textarea = response.data.data
+      })
+    },
+    updateConfigFile() {
+      this.$axios({
+        url: 'http://localhost:8080/file/config',
+        method: 'put',
+        params: {
+          context: this.$data.textarea
+        } // query参数
+      }).then(response => {
+        this.$data.msg = response.data.data
+      })
+      // this.getConfigFile()
     }
+  },
+  mounted:function () {   //自动触发写入的函数
+    this.getConfigFile();
   }
 
 }
