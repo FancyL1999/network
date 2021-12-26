@@ -5,10 +5,13 @@
     </el-col>
     <el-col class="grid-content width-50">
       <el-row style="margin-bottom: 2%" class="grid-content2 content-color">
-        <graph></graph>
+        <graph @transfer-Data="getflag">
+
+        </graph>
       </el-row>
       <el-row style="margin-top: 2%" class="grid-content2 content-color">
-        <showinfo></showinfo>
+<!--        选择的是：{{flags}}-->
+        <showinfo :flags="flags"></showinfo>
       </el-row>
     </el-col>
   </el-row>
@@ -26,6 +29,13 @@
     },
     data() {
       return {
+        flags :''
+      }
+    },
+    methods:{
+      getflag(data){
+        this.flags = data
+        console.log(data)
       }
     }
   }
@@ -61,6 +71,7 @@
     border-radius: 5px;
     min-height: 240px;
     height: 49%;
+    /*height: 100%;*/
   }
 
   .autoHeight {
