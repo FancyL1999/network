@@ -14,7 +14,7 @@
       <el-col>
         <el-input
           type="textarea"
-          :rows="5"
+          :rows="4"
           placeholder="请输入内容"
           v-model="textcommand">
         </el-input>
@@ -48,7 +48,7 @@
       <el-col>
         <el-input
           type="textarea"
-          :rows="15"
+          :rows="10"
           placeholder="请输入内容"
           v-model="textarea">
         </el-input>

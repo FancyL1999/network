@@ -1,12 +1,12 @@
 <template>
 
   <div>
-    <el-row type="flex" align="left" style="margin-top: 5%">
+    <el-row type="flex" align="left" style="margin-top: 3%">
       <el-col :span="1"/>
       <el-col :span="2">
         接口：
       </el-col>
-      <el-col :span="2">
+      <el-col :span="3">
         S0/0/0
       </el-col>
       <el-col :span="2">
@@ -36,7 +36,7 @@
       <el-col :span="2">
         接口：
       </el-col>
-      <el-col :span="2">
+      <el-col :span="3">
         S0/0/1
       </el-col>
       <el-col :span="2">
@@ -67,7 +67,7 @@
       <el-col :span="2">
         接口：
       </el-col>
-      <el-col :span="2">
+      <el-col :span="3">
         g0/0/0
       </el-col>
       <el-col :span="2">
@@ -97,7 +97,7 @@
       <el-col :span="2">
         接口：
       </el-col>
-      <el-col :span="2">
+      <el-col :span="3">
         g0/0/1
       </el-col>
       <el-col :span="2">
@@ -127,7 +127,7 @@
       <el-col :span="2">
         接口：
       </el-col>
-      <el-col :span="2">
+      <el-col :span="3">
         loopback01
       </el-col>
       <el-col :span="2">
@@ -157,7 +157,7 @@
       <el-col :span="2">
         接口：
       </el-col>
-      <el-col :span="2">
+      <el-col :span="3">
         loopback02
       </el-col>
       <el-col :span="2">
@@ -187,7 +187,7 @@
       <el-col :span="2">
         接口：
       </el-col>
-      <el-col :span="2">
+      <el-col :span="3">
         loopback03
       </el-col>
       <el-col :span="2">
@@ -217,7 +217,7 @@
       <el-col :span="2">
         接口：
       </el-col>
-      <el-col :span="2">
+      <el-col :span="3">
         loopback04
       </el-col>
       <el-col :span="2">
@@ -247,7 +247,7 @@
       <el-col :span="2">
         接口：
       </el-col>
-      <el-col :span="2">
+      <el-col :span="3">
         loopback05
       </el-col>
       <el-col :span="2">
