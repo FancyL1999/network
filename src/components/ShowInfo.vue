@@ -10,7 +10,7 @@
     <el-row type="flex" align="left">
       <el-col :span="2"/>
       <el-col :span="3" align="left">
-        接口：{{testshow.s0.interface}}
+        接口：{{testshow.s0.itf}}
       </el-col>
       <el-col :span="1"/>
       <el-col :span="4" align="left">
@@ -28,7 +28,7 @@
     <el-row type="flex" align="left">
       <el-col :span="2"/>
       <el-col :span="3" align="left">
-        接口：{{testshow.s1.interface}}
+        接口：{{testshow.s1.itf}}
       </el-col>
       <el-col :span="1"/>
       <el-col :span="4" align="left">
@@ -46,7 +46,7 @@
     <el-row type="flex" align="left">
       <el-col :span="2"/>
       <el-col :span="3" align="left">
-        接口：{{testshow.g0.interface}}
+        接口：{{testshow.g0.itf}}
       </el-col>
       <el-col :span="1"/>
       <el-col :span="4" align="left">
@@ -64,7 +64,7 @@
     <el-row type="flex" align="left">
       <el-col :span="2"/>
       <el-col :span="3" align="left">
-        接口：{{testshow.g1.interface}}
+        接口：{{testshow.g1.itf}}
       </el-col>
       <el-col :span="1"/>
       <el-col :span="4" align="left">
@@ -82,7 +82,7 @@
       <el-row type="flex" align="left">
         <el-col :span="2"/>
         <el-col :span="3" align="left">
-          接口：{{testshow.lo0.interface}}
+          接口：{{testshow.lo0.itf}}
         </el-col>
         <el-col :span="1"/>
         <el-col :span="4" align="left">
@@ -100,7 +100,7 @@
       <el-row type="flex" align="left">
         <el-col :span="2"/>
         <el-col :span="3" align="left">
-          接口：{{testshow.lo1.interface}}
+          接口：{{testshow.lo1.itf}}
         </el-col>
         <el-col :span="1"/>
         <el-col :span="4" align="left">
@@ -118,7 +118,7 @@
       <el-row type="flex" align="left">
         <el-col :span="2"/>
         <el-col :span="3" align="left">
-          接口：{{testshow.lo2.interface}}
+          接口：{{testshow.lo2.itf}}
         </el-col>
         <el-col :span="1"/>
         <el-col :span="4" align="left">
@@ -136,7 +136,7 @@
       <el-row type="flex" align="left">
         <el-col :span="2"/>
         <el-col :span="3" align="left">
-          接口：{{testshow.lo3.interface}}
+          接口：{{testshow.lo3.itf}}
         </el-col>
         <el-col :span="1"/>
         <el-col :span="4" align="left">
@@ -154,7 +154,7 @@
       <el-row type="flex" align="left">
         <el-col :span="2"/>
         <el-col :span="3" align="left">
-          接口：{{testshow.lo4.interface}}
+          接口：{{testshow.lo4.itf}}
         </el-col>
         <el-col :span="1"/>
         <el-col :span="4" align="left">
@@ -172,7 +172,7 @@
       <el-row type="flex" align="left">
         <el-col :span="2"/>
         <el-col :span="3" align="left">
-          接口：{{testshow.lo5.interface}}
+          接口：{{testshow.lo5.itf}}
         </el-col>
         <el-col :span="1"/>
         <el-col :span="4" align="left">
@@ -196,7 +196,7 @@
         </el-col>
         <el-col :span="2"/>
         <el-col :span="4" align="left">
-          接口：{{testshow.left.interface}}
+          接口：{{testshow.left.itf}}
         </el-col>
         <el-col :span="1"/>
         <el-col :span="4" align="left">
@@ -218,7 +218,7 @@
         </el-col>
         <el-col :span="2"/>
         <el-col :span="4" align="left">
-          接口：{{testshow.right.interface}}
+          接口：{{testshow.right.itf}}
         </el-col>
         <el-col :span="1"/>
         <el-col :span="4" align="left">
