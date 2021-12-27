@@ -113,7 +113,7 @@ export default {
       // console.log(curId)
       this.$axios({
         url: 'http://localhost:8080/check/ping/'+ curId,
-        method: 'put',
+        method: 'get',
         params: {
           ip: this.$data.ip
         } // query参数
@@ -136,6 +136,13 @@ export default {
         params: {
           context: this.$data.textarea
         } // query参数
+      }).then(response => {
+        // this.$data.msg = response.data.data
+      })
+
+      this.$axios({
+        url: 'http://localhost:8080/check/test',
+        method: 'get',
       }).then(response => {
         this.$data.msg = response.data.data
       })

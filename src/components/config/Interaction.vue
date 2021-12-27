@@ -26,7 +26,7 @@
           size="small"
           type="primary"
           plain
-          @click="handleSub('s0/0/0', ip_s0, mask_s0)">提交
+          @click="handleSub('s0', ip_s0, mask_s0)">提交
         </el-button>
       </el-col>
     </el-row>
@@ -57,7 +57,7 @@
           size="small"
           type="primary"
           plain
-          @click="handleSub('s0/0/1', ip_s1, mask_s1)">提交
+          @click="handleSub('s1', ip_s1, mask_s1)">提交
         </el-button>
       </el-col>
     </el-row>
@@ -87,7 +87,7 @@
           size="small"
           type="primary"
           plain
-          @click="handleSub('g0/0/0', ip_g0, mask_g0)">提交
+          @click="handleSub('g0', ip_g0, mask_g0)">提交
         </el-button>
       </el-col>
     </el-row>
@@ -117,7 +117,7 @@
           size="small"
           type="primary"
           plain
-          @click="handleSub('g0/0/1', ip_g1, mask_g1)">提交
+          @click="handleSub('g1', ip_g1, mask_g1)">提交
         </el-button>
       </el-col>
     </el-row>
@@ -147,7 +147,7 @@
           size="small"
           type="primary"
           plain
-          @click="handleSub('loopback01', ip_lb1, mask_lb1)">提交
+          @click="handleSub('lo1', ip_lb1, mask_lb1)">提交
         </el-button>
       </el-col>
     </el-row>
@@ -177,7 +177,7 @@
           size="small"
           type="primary"
           plain
-          @click="handleSub('loopback02', ip_lb2, mask_lb2)">提交
+          @click="handleSub('lo2', ip_lb2, mask_lb2)">提交
         </el-button>
       </el-col>
     </el-row>
@@ -207,7 +207,7 @@
           size="small"
           type="primary"
           plain
-          @click="handleSub('loopback03', ip_lb3, mask_lb3)">提交
+          @click="handleSub('lo3', ip_lb3, mask_lb3)">提交
         </el-button>
       </el-col>
     </el-row>
@@ -237,7 +237,7 @@
           size="small"
           type="primary"
           plain
-          @click="handleSub('loopback04', ip_lb4, mask_lb4)">提交
+          @click="handleSub('lo4', ip_lb4, mask_lb4)">提交
         </el-button>
       </el-col>
     </el-row>
@@ -267,7 +267,7 @@
           size="small"
           type="primary"
           plain
-          @click="handleSub('loopback05', ip_lb5, mask_lb5)">提交
+          @click="handleSub('lo5', ip_lb5, mask_lb5)">提交
         </el-button>
       </el-col>
     </el-row>

@@ -123,12 +123,13 @@ export default {
         method: 'put',
         data: {
           id: this.$parent.$parent.$parent.$parent.$parent.$parent.$parent.$data.value,
-          command: textcommand
+          command: this.$data.textcommand
         }, // body参数
         // params: {
         //   end: 1900 + this.$data.end.getYear()
         // } // query参数
       }).then(response => {
+        console.log(response.data)
         this.$data.msg = response.data.data
       })
     },
@@ -148,9 +149,17 @@ export default {
           context: this.$data.textarea
         } // query参数
       }).then(response => {
+        // this.$data.msg = response.data.data
+      })
+      this.$axios({
+        url: 'http://localhost:8080/config/file',
+        method: 'put',
+        params: {
+          id: this.$parent.$parent.$parent.$parent.$parent.$parent.$parent.$data.value
+        } // query参数
+      }).then(response => {
         this.$data.msg = response.data.data
       })
-      // this.getConfigFile()
     }
   },
   mounted:function () {   //自动触发写入的函数
