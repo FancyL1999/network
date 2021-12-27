@@ -5,12 +5,12 @@
       <el-header>
         <i class="el-icon-user-solid"></i>
         <span>拓扑自动化搭建及校验管理系统</span>
-        <el-select v-model="value" placeholder="请选择路由" style="float:right">
+        <el-select v-model="value" placeholder="请选择路由" style="position:center" @change="routerchange">
           <el-option
             v-for="item in options"
             :key="item.value"
             :label="item.label"
-            :value="item.value">
+            :value="item.value" >
           </el-option>
         </el-select>
       </el-header>
@@ -58,7 +58,26 @@
         }],
         value: ''
       }
+    },
+    methods:{
+      routerchange(){
+        this.$axios({
+          url: 'http://localhost:8080/connection/distinct',
+          method: 'get',
+        }).then(response => {
+        })
+        this.$axios({
+          url: 'http://localhost:8080/connection/establish',
+          method: 'get',
+          params: {
+            id: this.$data.value
+          } // query参数
+        }).then(response => {
+        })
+
+      }
     }
+
   }
 
 </script>

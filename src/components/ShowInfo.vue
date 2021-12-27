@@ -34,7 +34,7 @@
     <el-row type="flex" align="left">
       <el-col :span="2"/>
       <el-col :span="8" align="left">
-        flag：{{flags}}
+        flag：{{index}}
       </el-col>
     </el-row>
   </div>
@@ -51,7 +51,8 @@
               IP:'172.16.0.1',
               MASK:'225.225.225.0',
               status:'ON'},
-            choice:[]
+            choice:[],
+            index:0
           }
       },
       props:['flags'],
@@ -59,17 +60,26 @@
         flags :function (newVal,oldVal) {
           console.log(newVal, oldVal)
           this.choice=newVal;//newVal就是获取的动态新数据，赋值给newdata
+          this.index=this.choice.indexOf(-1)
         }
       },
       methods:{
         get_data:function(){
           // 使用axios请求数据
-          this.$axios.get("http://127.0.0.1:4523/mock/459015/view/router/1").then((response)=>{
-            console.log(response);
+          this.$axios.get("http://localhost:8080/view").then((response)=>{
+            console.log(response.data);
           }).catch(error=>{
             console.log(error);
           })
         }
+      },
+      created() {
+        this.get_data()
+        // this.$axios.get("http://localhost:8080/view").then((response)=>{
+        //   console.log(response);
+        // }).catch(error=>{
+        //   console.log(error);
+        // })
       }
 
 
