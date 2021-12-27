@@ -272,7 +272,7 @@
             allinfo:{},
             testshow:{},
             testinfo:{
-              "router_01": {
+              "router1": {
                 "s0": {
                   "ip": "172.168.1.1",
                   "interface": "s0/0/0",
@@ -296,90 +296,199 @@
                   "interface": "g0/1",
                   "mask": null,
                   "status": null
-                }
-              },
-              "router_02": {
-                "s0": {
-                  "ip": "172.168.1.2",
+                },
+                "lo0": {
+                  "ip": "172.168.1.1",
                   "interface": "s0/0/0",
                   "mask": "255.255.255.0",
                   "status": "1"
                 },
-                "s1": {
-                  "ip": null,
+                "lo1": {
+                  "ip": "172.168.2.1",
                   "interface": "s0/0/1",
                   "mask": null,
                   "status": null
                 },
-                "g0": {
-                  "ip": "172.168.1.3",
+                "lo2": {
+                  "ip": "172.168.3.1",
                   "interface": "g0/0",
                   "mask": "255.255.255.0",
-                  "status": "1"
+                  "status": "0"
                 },
-                "g1": {
+                "lo3": {
+                  "ip": null,
+                  "interface": "g0/1",
+                  "mask": null,
+                  "status": null
+                },
+                "lo4": {
+                  "ip": "172.168.3.1",
+                  "interface": "g0/0",
+                  "mask": "255.255.255.0",
+                  "status": "0"
+                },
+                "lo5": {
                   "ip": null,
                   "interface": "g0/1",
                   "mask": null,
                   "status": null
                 }
               },
-              "router_03": {
+              "router2": {
                 "s0": {
-                  "ip": null,
+                  "ip": "172.168.1.1",
                   "interface": "s0/0/0",
-                  "mask": null,
-                  "status": null
+                  "mask": "255.255.255.0",
+                  "status": "1"
                 },
                 "s1": {
-                  "ip": null,
+                  "ip": "172.168.2.1",
                   "interface": "s0/0/1",
                   "mask": null,
                   "status": null
                 },
                 "g0": {
-                  "ip": null,
+                  "ip": "172.168.3.1",
                   "interface": "g0/0",
-                  "mask": null,
-                  "status": null
+                  "mask": "255.255.255.0",
+                  "status": "0"
                 },
                 "g1": {
                   "ip": null,
                   "interface": "g0/1",
                   "mask": null,
                   "status": null
-                }
-              },
-              "cable_01": {
-                "status": null,
-                "left": {
-                  "ip": "172.168.1.3",
-                  "interface": "g0/0",
+                },
+                "lo0": {
+                  "ip": "172.168.1.1",
+                  "interface": "s0/0/0",
                   "mask": "255.255.255.0",
                   "status": "1"
                 },
-                "right": {
-                  "ip": "172.168.1.3",
-                  "interface": "g0/0",
-                  "mask": "255.255.255.0",
-                  "status": "1"
-                }
-              },
-              "cable_02": {
-                "status": null,
-                "left": {
-                  "ip": null,
-                  "interface": "s0/0/0",
+                "lo1": {
+                  "ip": "172.168.2.1",
+                  "interface": "s0/0/1",
                   "mask": null,
                   "status": null
                 },
-                "right": {
+                "lo2": {
+                  "ip": "172.168.3.1",
+                  "interface": "g0/0",
+                  "mask": "255.255.255.0",
+                  "status": "0"
+                },
+                "lo3": {
                   "ip": null,
-                  "interface": "s0/0/0",
+                  "interface": "g0/1",
                   "mask": null,
                   "status": null
+                },
+                "lo4": {
+                  "ip": "172.168.3.1",
+                  "interface": "g0/0",
+                  "mask": "255.255.255.0",
+                  "status": "0"
+                },
+                "lo5": {
+                  "ip": null,
+                  "interface": "g0/1",
+                  "mask": null,
+                  "status": null
+                }
+              },
+              "router3": {
+                "s0": {
+                  "ip": "172.168.1.1",
+                  "interface": "s0/0/0",
+                  "mask": "255.255.255.0",
+                  "status": "1"
+                },
+                "s1": {
+                  "ip": "172.168.2.1",
+                  "interface": "s0/0/1",
+                  "mask": null,
+                  "status": null
+                },
+                "g0": {
+                  "ip": "172.168.3.1",
+                  "interface": "g0/0",
+                  "mask": "255.255.255.0",
+                  "status": "0"
+                },
+                "g1": {
+                  "ip": null,
+                  "interface": "g0/1",
+                  "mask": null,
+                  "status": null
+                },
+                "lo0": {
+                  "ip": "172.168.1.1",
+                  "interface": "s0/0/0",
+                  "mask": "255.255.255.0",
+                  "status": "1"
+                },
+                "lo1": {
+                  "ip": "172.168.2.1",
+                  "interface": "s0/0/1",
+                  "mask": null,
+                  "status": null
+                },
+                "lo2": {
+                  "ip": "172.168.3.1",
+                  "interface": "g0/0",
+                  "mask": "255.255.255.0",
+                  "status": "0"
+                },
+                "lo3": {
+                  "ip": null,
+                  "interface": "g0/1",
+                  "mask": null,
+                  "status": null
+                },
+                "lo4": {
+                  "ip": "172.168.3.1",
+                  "interface": "g0/0",
+                  "mask": "255.255.255.0",
+                  "status": "0"
+                },
+                "lo5": {
+                  "ip": null,
+                  "interface": "g0/1",
+                  "mask": null,
+                  "status": null
+                }
+              },
+              "cable1": {
+                "status": null,
+                "left": {
+                  "ip": "172.168.3.1",
+                  "interface": "g0/0",
+                  "mask": "255.255.255.0",
+                  "status": "0"
+                },
+                "right": {
+                  "ip": "172.168.3.1",
+                  "interface": "g0/0",
+                  "mask": "255.255.255.0",
+                  "status": "0"
+                }
+              },
+              "cable2": {
+                "status": null,
+                "left": {
+                  "ip": "172.168.3.1",
+                  "interface": "g0/0",
+                  "mask": "255.255.255.0",
+                  "status": "0"
+                },
+                "right": {
+                  "ip": "172.168.3.1",
+                  "interface": "g0/0",
+                  "mask": "255.255.255.0",
+                  "status": "0"
                 }
               }
+
             }
           }
       },
@@ -400,8 +509,8 @@
         get_data:function(){
           // 使用axios请求数据
           this.$axios.get("http://localhost:8080/view").then((response)=>{
-            console.log(response.data);
-            this.allinfo = response.data
+            console.log(response.data.data);
+            this.allinfo = response.data.data
           }).catch(error=>{
             console.log(error);
           })
