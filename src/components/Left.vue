@@ -9,7 +9,7 @@
 
         </graph>
       </el-row>
-      <el-row style="margin-top: 2%" class="grid-content2 content-color">
+      <el-row style="margin-top: 2%" class="grid-content3 content-color">
 <!--        选择的是：{{flags}}-->
         <showinfo :flags="flags"></showinfo>
       </el-row>
@@ -70,7 +70,14 @@
   .grid-content2 {
     border-radius: 5px;
     min-height: 240px;
-    height: 49%;
+    height: 39%;
+    /*height: 100%;*/
+  }
+
+  .grid-content3 {
+    border-radius: 5px;
+    min-height: 240px;
+    height: 59%;
     /*height: 100%;*/
   }
 
