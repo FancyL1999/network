@@ -188,18 +188,20 @@
         </el-col>
       </el-row>
     </div>
-    <div v-if="index===3 || index===4 ">
+    <div v-if="index===3 ">
       <el-row type="flex" align="left">
         <el-col :span="2"/>
         <el-col :span="4" align="left">
-          状态：{{testshow.status}}
+          网线状态：{{testshow.status}}
         </el-col>
       </el-row>
       <el-row type="flex" align="left">
         <el-col :span="2"/>
-        <el-col :span="1" align="left">
-          左：
+        <el-col :span="4" align="left">
+          左：router1
         </el-col>
+      </el-row>
+      <el-row type="flex" align="left">
         <el-col :span="2"/>
         <el-col :span="4" align="left">
           接口：{{testshow.left.itf}}
@@ -219,9 +221,67 @@
       </el-row>
       <el-row type="flex" align="left">
         <el-col :span="2"/>
-        <el-col :span="1" align="left">
-          右：
+        <el-col :span="4" align="left">
+          右：router2
         </el-col>
+      </el-row>
+      <el-row type="flex" align="left">
+        <el-col :span="2"/>
+        <el-col :span="4" align="left">
+          接口：{{testshow.right.itf}}
+        </el-col>
+        <el-col :span="1"/>
+        <el-col :span="4" align="left">
+          IP：{{testshow.right.ip}}
+        </el-col>
+        <el-col :span="1"/>
+        <el-col :span="6" align="left">
+          掩码：{{testshow.right.mask}}
+        </el-col>
+        <el-col :span="1"/>
+        <el-col :span="4" align="left">
+          状态：{{testshow.right.status}}
+        </el-col>
+      </el-row>
+    </div>
+    <div v-if="index===4 ">
+      <el-row type="flex" align="left">
+        <el-col :span="2"/>
+        <el-col :span="4" align="left">
+          网线状态：{{testshow.status}}
+        </el-col>
+      </el-row>
+      <el-row type="flex" align="left">
+        <el-col :span="2"/>
+        <el-col :span="4" align="left">
+          左：router2
+        </el-col>
+      </el-row>
+      <el-row type="flex" align="left">
+        <el-col :span="2"/>
+        <el-col :span="4" align="left">
+          接口：{{testshow.left.itf}}
+        </el-col>
+        <el-col :span="1"/>
+        <el-col :span="4" align="left">
+          IP：{{testshow.left.ip}}
+        </el-col>
+        <el-col :span="1"/>
+        <el-col :span="6" align="left">
+          掩码：{{testshow.left.mask}}
+        </el-col>
+        <el-col :span="1"/>
+        <el-col :span="4" align="left">
+          状态：{{testshow.left.status}}
+        </el-col>
+      </el-row>
+      <el-row type="flex" align="left">
+        <el-col :span="2"/>
+        <el-col :span="4" align="left">
+          右：router3
+        </el-col>
+      </el-row>
+      <el-row type="flex" align="left">
         <el-col :span="2"/>
         <el-col :span="4" align="left">
           接口：{{testshow.right.itf}}
@@ -281,61 +341,61 @@
               "router1": {
                 "s0": {
                   "ip": "172.168.1.1",
-                  "interface": "s0/0/0",
+                  "itf": "s0/0/0",
                   "mask": "255.255.255.0",
                   "status": "1"
                 },
                 "s1": {
                   "ip": "172.168.2.1",
-                  "interface": "s0/0/1",
+                  "itf": "s0/0/1",
                   "mask": null,
                   "status": null
                 },
                 "g0": {
                   "ip": "172.168.3.1",
-                  "interface": "g0/0",
+                  "itf": "g0/0",
                   "mask": "255.255.255.0",
                   "status": "0"
                 },
                 "g1": {
                   "ip": null,
-                  "interface": "g0/1",
+                  "itf": "g0/1",
                   "mask": null,
                   "status": null
                 },
                 "lo0": {
                   "ip": "172.168.1.1",
-                  "interface": "s0/0/0",
+                  "itf": "s0/0/0",
                   "mask": "255.255.255.0",
                   "status": "1"
                 },
                 "lo1": {
                   "ip": "172.168.2.1",
-                  "interface": "s0/0/1",
+                  "itf": "s0/0/1",
                   "mask": null,
                   "status": null
                 },
                 "lo2": {
                   "ip": "172.168.3.1",
-                  "interface": "g0/0",
+                  "itf": "g0/0",
                   "mask": "255.255.255.0",
                   "status": "0"
                 },
                 "lo3": {
                   "ip": null,
-                  "interface": "g0/1",
+                  "itf": "g0/1",
                   "mask": null,
                   "status": null
                 },
                 "lo4": {
                   "ip": "172.168.3.1",
-                  "interface": "g0/0",
+                  "itf": "g0/0",
                   "mask": "255.255.255.0",
                   "status": "0"
                 },
                 "lo5": {
                   "ip": null,
-                  "interface": "g0/1",
+                  "itf": "g0/1",
                   "mask": null,
                   "status": null
                 }
@@ -343,61 +403,61 @@
               "router2": {
                 "s0": {
                   "ip": "172.168.1.1",
-                  "interface": "s0/0/0",
+                  "itf": "s0/0/0",
                   "mask": "255.255.255.0",
                   "status": "1"
                 },
                 "s1": {
                   "ip": "172.168.2.1",
-                  "interface": "s0/0/1",
+                  "itf": "s0/0/1",
                   "mask": null,
                   "status": null
                 },
                 "g0": {
                   "ip": "172.168.3.1",
-                  "interface": "g0/0",
+                  "itf": "g0/0",
                   "mask": "255.255.255.0",
                   "status": "0"
                 },
                 "g1": {
                   "ip": null,
-                  "interface": "g0/1",
+                  "itf": "g0/1",
                   "mask": null,
                   "status": null
                 },
                 "lo0": {
                   "ip": "172.168.1.1",
-                  "interface": "s0/0/0",
+                  "itf": "s0/0/0",
                   "mask": "255.255.255.0",
                   "status": "1"
                 },
                 "lo1": {
                   "ip": "172.168.2.1",
-                  "interface": "s0/0/1",
+                  "itf": "s0/0/1",
                   "mask": null,
                   "status": null
                 },
                 "lo2": {
                   "ip": "172.168.3.1",
-                  "interface": "g0/0",
+                  "itf": "g0/0",
                   "mask": "255.255.255.0",
                   "status": "0"
                 },
                 "lo3": {
                   "ip": null,
-                  "interface": "g0/1",
+                  "itf": "g0/1",
                   "mask": null,
                   "status": null
                 },
                 "lo4": {
                   "ip": "172.168.3.1",
-                  "interface": "g0/0",
+                  "itf": "g0/0",
                   "mask": "255.255.255.0",
                   "status": "0"
                 },
                 "lo5": {
                   "ip": null,
-                  "interface": "g0/1",
+                  "itf": "g0/1",
                   "mask": null,
                   "status": null
                 }
@@ -405,31 +465,31 @@
               "router3": {
                 "s0": {
                   "ip": "172.168.1.1",
-                  "interface": "s0/0/0",
+                  "itf": "s0/0/0",
                   "mask": "255.255.255.0",
                   "status": "1"
                 },
                 "s1": {
                   "ip": "172.168.2.1",
-                  "interface": "s0/0/1",
+                  "itf": "s0/0/1",
                   "mask": null,
                   "status": null
                 },
                 "g0": {
                   "ip": "172.168.3.1",
-                  "interface": "g0/0",
+                  "itf": "g0/0",
                   "mask": "255.255.255.0",
                   "status": "0"
                 },
                 "g1": {
                   "ip": null,
-                  "interface": "g0/1",
+                  "itf": "g0/1",
                   "mask": null,
                   "status": null
                 },
                 "lo0": {
                   "ip": "172.168.1.1",
-                  "interface": "s0/0/0",
+                  "itf": "s0/0/0",
                   "mask": "255.255.255.0",
                   "status": "1"
                 },
@@ -505,7 +565,7 @@
           this.choice=newVal;//newVal就是获取的动态新数据，赋值给newdata
           this.index=this.choice.indexOf(-1)
           this.get_data()
-          // this.allinfo = this.testinfo;
+          this.allinfo = this.testinfo;
           this.testname = this.name[this.index]
           this.testshow = this.allinfo[this.testname]
           console.log(this.testshow)
@@ -524,7 +584,7 @@
       },
       created() {
         this.get_data()
-        // this.allinfo = this.testinfo;
+        this.allinfo = this.testinfo;
         this.testname = this.name[this.index]
         this.testshow = this.allinfo[this.testname]
         console.log(this.testshow)
