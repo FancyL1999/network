@@ -46,37 +46,37 @@
     <el-row type="flex" align="left">
       <el-col :span="2"/>
       <el-col :span="3" align="left">
-        接口：{{testshow.g0.itf}}
+        接口：{{testshow.f0.itf}}
       </el-col>
       <el-col :span="1"/>
       <el-col :span="4" align="left">
-        IP：{{testshow.g0.ip}}
+        IP：{{testshow.f0.ip}}
       </el-col>
       <el-col :span="1"/>
       <el-col :span="6" align="left">
-        掩码：{{testshow.g0.mask}}
+        掩码：{{testshow.f0.mask}}
       </el-col>
       <el-col :span="1"/>
       <el-col :span="4" align="left">
-        状态：{{testshow.g0.status}}
+        状态：{{testshow.f0.status}}
       </el-col>
     </el-row>
     <el-row type="flex" align="left">
       <el-col :span="2"/>
       <el-col :span="3" align="left">
-        接口：{{testshow.g1.itf}}
+        接口：{{testshow.f1.itf}}
       </el-col>
       <el-col :span="1"/>
       <el-col :span="4" align="left">
-        IP：{{testshow.g1.ip}}
+        IP：{{testshow.f1.ip}}
       </el-col>
       <el-col :span="1"/>
       <el-col :span="6" align="left">
-        掩码：{{testshow.g1.mask}}
+        掩码：{{testshow.f1.mask}}
       </el-col>
       <el-col :span="1"/>
       <el-col :span="4" align="left">
-        状态：{{testshow.g1.status}}
+        状态：{{testshow.f1.status}}
       </el-col>
     </el-row>
       <el-row type="flex" align="left">
