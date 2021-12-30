@@ -191,6 +191,12 @@
     <div v-if="index===3 || index===4 ">
       <el-row type="flex" align="left">
         <el-col :span="2"/>
+        <el-col :span="4" align="left">
+          状态：{{testshow.status}}
+        </el-col>
+      </el-row>
+      <el-row type="flex" align="left">
+        <el-col :span="2"/>
         <el-col :span="1" align="left">
           左：
         </el-col>
@@ -474,7 +480,7 @@
                 }
               },
               "cable2": {
-                "status": null,
+                "status": "on",
                 "left": {
                   "ip": "172.168.3.1",
                   "interface": "g0/0",
