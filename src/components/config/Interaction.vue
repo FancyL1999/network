@@ -68,7 +68,7 @@
         接口：
       </el-col>
       <el-col :span="3">
-        g0/0/0
+        f0/0
       </el-col>
       <el-col :span="2">
         IP：
@@ -87,7 +87,7 @@
           size="small"
           type="primary"
           plain
-          @click="handleSub('g0', ip_g0, mask_g0)">提交
+          @click="handleSub('f0', ip_g0, mask_g0)">提交
         </el-button>
       </el-col>
     </el-row>
@@ -98,7 +98,7 @@
         接口：
       </el-col>
       <el-col :span="3">
-        g0/0/1
+        f0/1
       </el-col>
       <el-col :span="2">
         IP：
@@ -117,7 +117,37 @@
           size="small"
           type="primary"
           plain
-          @click="handleSub('g1', ip_g1, mask_g1)">提交
+          @click="handleSub('f1', ip_g1, mask_g1)">提交
+        </el-button>
+      </el-col>
+    </el-row>
+
+    <el-row type="flex" align="left">
+      <el-col :span="1"/>
+      <el-col :span="2">
+        接口：
+      </el-col>
+      <el-col :span="3">
+        loopback00
+      </el-col>
+      <el-col :span="2">
+        IP：
+      </el-col>
+      <el-col :span="5">
+        <el-input size="small" placeholder="请输入IP" v-model="ip_lb0"></el-input>
+      </el-col>
+      <el-col :span="2">
+        掩码：
+      </el-col>
+      <el-col :span="5">
+        <el-input size="small" placeholder="请输入掩码" v-model="mask_lb0"></el-input>
+      </el-col>
+      <el-col :span="4">
+        <el-button
+          size="small"
+          type="primary"
+          plain
+          @click="handleSub('lo0', ip_lb0, mask_lb0)">提交
         </el-button>
       </el-col>
     </el-row>
@@ -300,6 +330,8 @@ export default {
       mask_g0: '',
       ip_g1: '',
       mask_g1: '',
+      ip_lb0: '',
+      mask_lb0: '',
       ip_lb1: '',
       mask_lb1: '',
       ip_lb2: '',
