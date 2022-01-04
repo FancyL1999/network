@@ -13,6 +13,11 @@
             :value="item.value" >
           </el-option>
         </el-select>
+        <el-button
+          type="danger"
+          plain
+          @click="clear()">清空
+        </el-button>
       </el-header>
 
       <el-container class="autoHeight">
@@ -74,7 +79,13 @@
           } // query参数
         }).then(response => {
         })
-
+      },
+      clear(){
+        this.$axios({
+          url: 'http://localhost:8080/clear',
+          method: 'get'
+        }).then(response => {
+        })
       }
     }
 
